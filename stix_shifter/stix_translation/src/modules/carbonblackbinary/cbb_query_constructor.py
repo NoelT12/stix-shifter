@@ -26,8 +26,9 @@ def _fetch_network_protocol_mapping():
 
 class CbBQueryStringPatternTranslator:
     comparator_lookup = {
-        ComparisonExpressionOperators.And: "&q=",
+        ComparisonExpressionOperators.And: " AND ",
         ComparisonComparators.Equal: ":",
+        ComparisonExpressionOperators.Or: " OR ",
     }
 
     def __init__(self, pattern: Pattern, data_model_mapper, result_limit):
