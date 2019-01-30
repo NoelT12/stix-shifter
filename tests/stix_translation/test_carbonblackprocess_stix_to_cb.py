@@ -69,7 +69,8 @@ class TestStixToCBP(unittest.TestCase, object):
                 }
         for stix_pattern, query in stix_to_cbp_mapping.items():
             result = translation.translate(module, 'query', '{}', stix_pattern)
-            print("Query: "+result)
+            print("Result: ", result)
+            print("Query: ", query)
             assert result['queries'] == [query]
 
     def test_nested_parenthesis_in_pattern(self):

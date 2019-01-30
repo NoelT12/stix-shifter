@@ -29,6 +29,8 @@ class CbBQueryStringPatternTranslator:
         ComparisonExpressionOperators.And: " AND ",
         ComparisonComparators.Equal: ":",
         ComparisonExpressionOperators.Or: " OR ",
+        ObservationOperators.Or: 'OR',
+        ObservationOperators.And: 'OR'
     }
 
     def __init__(self, pattern: Pattern, data_model_mapper, result_limit):
